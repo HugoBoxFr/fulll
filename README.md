@@ -1,10 +1,16 @@
+# Algo Test
+
+cd Algo
+node algo.js
+
+fizzbuzz function in Algo/utils/fizzbuzz.js
+
 # Join fulll
 
-Space dedicated to the hiring process at [Fulll](https://www.fulll.fr). 
+Space dedicated to the hiring process at [Fulll](https://www.fulll.fr).
 If you're looking for a specific job offer, check our current list of [opened positions](https://www.welcometothejungle.com/fr/companies/fulll).
 
 Could not find the perfect match? Feel free to reach us and provide your resume, motivation and the role you would expect directly by mail at rh@fulll.fr
-
 
 # How are we structured?
 
@@ -15,7 +21,7 @@ Could not find the perfect match? Feel free to reach us and provide your resume,
 Example of **Squads** (collection of apps with same affinity):
 
 - Data
-- Workflow 
+- Workflow
 - Accounting
 - ...
 
@@ -47,13 +53,12 @@ The goal is to detect which chapter.s fits to you, how you can help us whilst im
 3. Technical tests / uses case to work on your side
 4. Second interview with a pair and a manager
 
-
-
 ### 3. Technical tests
 
 You will have to pass some technical test among following ones:
 
 #### Developers
+
 - [Algo](./Algo)
 - [Backend](./Backend)
 - [Frontend](./Frontend)
@@ -62,4 +67,5 @@ You will have to pass some technical test among following ones:
 - [Data Science](./DataScience)
 
 #### Product manager
+
 - [Product manager](./ProductManager)
