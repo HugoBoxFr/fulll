@@ -1,12 +1,19 @@
 const { fizzBuzzFunction } = require("./utils/fizzbuzz.js");
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-// generate an array with 10 items of random numbers from 1 to 50
-// change length if need more
-const randomNumbers = Array.from({ length: 10 }, () =>
-  Math.round(Math.random() * 50)
+// prompt user for a number
+rl.question(
+  "Choose a max number for you FizzBuzz test ? ",
+  function (maxValue) {
+    if (parseInt(maxValue)) {
+      fizzBuzzFunction(maxValue);
+    } else {
+      console.log("The expected value is an integer");
+    }
+    rl.close();
+  }
 );
-
-console.log("Array of numbers:", randomNumbers);
-
-// call the function from utils
-fizzBuzzFunction(randomNumbers);
