@@ -6,14 +6,11 @@ const rl = readline.createInterface({
 });
 
 // prompt user for a number
-rl.question(
-  "Choose a max number for you FizzBuzz test ? ",
-  function (maxValue) {
-    if (parseInt(maxValue)) {
-      fizzBuzzFunction(maxValue);
-    } else {
-      console.log("The expected value is an integer");
-    }
-    rl.close();
+rl.question("Choose a max number for you FizzBuzz test :", function (maxValue) {
+  if (parseInt(maxValue)) {
+    fizzBuzzFunction(maxValue);
+  } else {
+    console.log("The expected value is an integer");
   }
-);
+  rl.close();
+});

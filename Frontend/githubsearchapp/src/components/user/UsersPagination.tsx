@@ -1,10 +1,4 @@
-import React, {
-  Dispatch,
-  FC,
-  SetStateAction,
-  useEffect,
-  useState,
-} from "react";
+import React, { Dispatch, FC, SetStateAction } from "react";
 
 interface UserPaginationProps {
   page: number;
@@ -21,8 +15,6 @@ const UsersPagination: FC<UserPaginationProps> = ({
   setNumberPerPage,
   total,
 }) => {
-  const [numberOfResults, setNumberOfResults] = useState<number>(0);
-
   const handlePrevPage = (e: React.MouseEvent<HTMLButtonElement>) => {
     page <= 1 ? setPage(1) : setPage(page - 1);
   };
@@ -36,17 +28,9 @@ const UsersPagination: FC<UserPaginationProps> = ({
     setNumberPerPage(parseInt(e.target.value, 10));
   };
 
-  useEffect(() => {
-    const result =
-      page * numberPerPage < total
-        ? page * numberPerPage
-        : total - (page - 1) * numberPerPage + (page - 1) * numberPerPage;
-    setNumberOfResults(result);
-  }, [page, numberPerPage, total]);
-
   return (
     <div className="usersPaginationContainer">
-      <div className="usersPagination">
+      <div className="usersPagination content">
         <select
           name="choices"
           id="per_page_select"
@@ -57,11 +41,15 @@ const UsersPagination: FC<UserPaginationProps> = ({
           <option value="100">100</option>
         </select>
 
+        <p>{`${page} / ${
+          Math.ceil(total / numberPerPage) === 0
+            ? 1
+            : Math.ceil(total / numberPerPage)
+        }`}</p>
+
         <button onClick={handlePrevPage} disabled={page <= 1}>
           Prev
         </button>
-
-        <p>{`${numberOfResults} / ${total}`}</p>
 
         <button
           onClick={handleNextPage}

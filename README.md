@@ -5,6 +5,16 @@ node algo.js
 
 fizzbuzz function in Algo/utils/fizzbuzz.js
 
+# React Front Test
+
+cd FrontEnd/githubsearchapp
+npm start
+
+# React Front Test Jest
+
+cd FrontEnd/githubsearchapp/scr
+npm test
+
 # Join fulll
 
 Space dedicated to the hiring process at [Fulll](https://www.fulll.fr).
