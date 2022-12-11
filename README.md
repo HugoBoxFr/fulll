@@ -8,6 +8,7 @@ fizzbuzz function in Algo/utils/fizzbuzz.js
 # React Front Test
 
 cd FrontEnd/githubsearchapp
+npm i
 npm start
 
 # React Front Test Jest
