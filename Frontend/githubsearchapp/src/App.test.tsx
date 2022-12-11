@@ -1,4 +1,3 @@
-import React, { FormEvent, useState } from "react";
 import {
   fireEvent,
   queryByAttribute,
@@ -6,8 +5,6 @@ import {
   screen,
 } from "@testing-library/react";
 import Home from "./pages/Home";
-import Header from "./components/header/Header";
-import userEvent from "@testing-library/user-event";
 
 test("renders a header with a title", () => {
   render(<Home />);

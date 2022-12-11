@@ -37,9 +37,9 @@ const Home = () => {
     } catch (err) {
       console.error(err);
       if (err === 403)
-        setErrorMsg("You have exceeded the rate limit, please wait a bit");
+        setErrorMsg("You have exceeded the rate limit, please wait a bit...");
       if (err === 422)
-        setErrorMsg("Only the first 1000 search results are available");
+        setErrorMsg("Only the first 1000 search results are available...");
     } finally {
       setLoading(false);
     }
