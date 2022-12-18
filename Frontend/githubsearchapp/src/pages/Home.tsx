@@ -65,6 +65,7 @@ const Home = () => {
       }, 1000);
     } else {
       setUsers(null);
+      setTotal(0);
     }
     return () => {
       setLoading(false);
